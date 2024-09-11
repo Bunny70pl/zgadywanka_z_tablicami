@@ -38,5 +38,20 @@ public class Main {
         for (int i = 0; i < ListaLiczbPisanych.size(); i++) {
             System.out.println(ListaLiczbPisanych.get(i));
         }
+        //Loswanie liczb bez powtorzen
+        ArrayList <Integer> listaLosowychBezPowtorzen = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            int liczba = (int)(Math.random()*100+1);
+            while(listaLosowychBezPowtorzen.contains(liczba)){
+                liczba = (int)(Math.random()*100+1);
+            }
+            listaLosowychBezPowtorzen.add(liczba);
+        }
+        for(Integer element:listaLosowychBezPowtorzen) {
+            System.out.print(element+" ");
+        }
+        //wypisywanie
+        System.out.println("Wylosowane bez powtorzen");
+        System.out.println(listaLosowychBezPowtorzen);
     }
 }
