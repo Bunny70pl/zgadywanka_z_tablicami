@@ -68,5 +68,17 @@ public class Main {
          elementy nie sa indeksowane
 
          */
+
+        LinkedList<Integer> trafione = new LinkedList<>();
+        //trafione to elementy ktore wystepuja w wylosownach i w wpisanch
+        for (int i = 0; i < zbiorLiczbLosowych.size(); i++) {
+            if(zbiorLiczbLosowych.contains(ListaLiczbPisanych.get(i))){
+                trafione.add(ListaLiczbPisanych.get(i));
+            }
+        }
+        System.out.println("Trafone: ");
+        for (int element:trafione) {
+            System.out.print(element+ " ");
+        }
     }
 }
